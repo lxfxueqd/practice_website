@@ -1,0 +1,471 @@
+body{
+    background-color: white;
+    margin: 0 auto;
+    padding: 0;
+    font-family:monospace;
+}
+
+/*网站头部*/
+header{
+    background-image: url("./images/main_img.jpg");
+    background-repeat:round;
+    object-fit: cover;
+    height: 480px;
+    flex-flow: row ;
+}
+
+.header_top{
+    height: 80px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: space-between;
+}
+
+.web_title{
+    height: 80px;
+    padding-left:40px;
+    flex:1;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+.web_name{
+    color: white;
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+/*导航栏*/
+nav{
+    height: 80px;
+}
+
+nav ul{
+    padding: 0;
+    margin:20px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li a{
+    color: whitesmoke;
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-left:20px;
+    border-radius: 10px;
+}
+
+nav li a:hover{
+    background-color: black;
+}
+nav li .active{
+    background-color: gray;
+}
+
+/*欢迎词*/
+.header_bottom{
+    position:relative;
+    top:30%;
+}
+
+.header_bottom span{
+    display: block;
+    color:white;
+    text-align: center;
+    font-size: 54px;
+    letter-spacing: 5px;
+}
+
+
+/*报名框*/
+.sign_up{
+    font-family:sans-serif;
+}
+
+
+.sign_up_form .form_1{
+    /* display: flex; */
+    display:grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
+    align-items: center;
+    padding:0px 20px;
+    background-color:white;
+    width:850px;
+    height: 140px;
+    position: relative;
+    top:-50px;
+    border-radius: 15px;
+    box-shadow: gainsboro 3px 3px 3px 3px;
+}
+
+.sign_up_form label{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sign_up_form input, #school, #year_of_enter_school{
+    margin-top:10px;
+    height:50px;
+    width:220px;
+    background-color:rgb(240, 239, 239);
+    border:none;  
+    border-radius: 5px;
+}
+
+.sign_up_form input:focus{
+    border:1px solid black;
+}
+
+#year_of_enter_school{
+    width:150px;
+    margin-right:25px;
+}
+
+.sign_up_form button{
+    height:50px;
+    width:150px;
+    color:white;
+    background-color: rgb(0, 174, 255);
+    border-radius: 25px;
+    border:none;
+    margin-top:25px;
+    font-size:18px;
+}
+
+.sign_up_form button:hover{
+    background-color: rgb(116, 116, 240);
+}
+
+.sign_up_form .button::after{
+    background-color: cadetblue;
+
+}
+
+/* 学校选择弹出框 */
+#school_select_panel{
+    width: 540px;
+    height: 280px;
+    background-color: white;
+    border-radius: 15px;
+    border-top-left-radius:0px;
+    border:1px solid gainsboro;
+    position: relative;
+    bottom:80px;
+    left:20px;
+    display: flex;
+    visibility: hidden;
+}
+
+#school_select_panel::before{
+    content:"";
+    position:absolute;
+    left:0;
+    margin-top: -2px;
+    height: 4px;
+    width: 41%; 
+    background-color: white;
+}
+
+.menu_items{
+    width:140px;
+    height: 270px;
+    line-height: 40px;
+    font-size: 18px;
+    color: rgb(70, 70, 70);
+    border-right: 1px solid gainsboro;
+    overflow-y:scroll;  
+}
+
+.menu_items .active{
+    font-weight: bold;
+    color: black;
+}
+
+.menu_items::-webkit-scrollbar,.menu_school div::-webkit-scrollbar{
+    display: none;
+}
+
+.menu_school div{
+    width:400px;
+    height: 270px;
+    line-height: 40px;
+    font-size: 18px;
+    color: rgb(70, 70, 70);   
+    overflow-y:scroll;
+    position:absolute;  
+    visibility: hidden;
+}
+
+.menu_school .active{
+    visibility:visible;
+}
+
+.menu_items ul{
+    list-style-type: none; 
+}
+
+.menu_school div ul{
+    list-style-type: none; 
+    display: grid;
+    grid-template-columns: 195px 195px ;
+}
+
+/* 入学年份选择弹出框 */
+#year_select_panel{
+    width: 360px;
+    height: 180px;
+    background-color: white;
+    border-radius: 15px;
+    border-top-left-radius:0px;
+    border:1px solid gainsboro;
+    position: relative;
+    bottom:362px;
+    left:272px;
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#year_select_panel::before{
+    content:"";
+    position:absolute;
+    left:0;
+    margin-top: -2px;
+    height: 4px;
+    width: 41.8%; 
+    background-color: white;
+}
+
+#year_select_panel span{
+    width:90px;
+    height: 60px;
+    line-height: 60px;
+    font-size:15px;
+    text-align: center;
+}
+
+
+
+/*正文部分*/
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* 宗旨部分 */
+.course_purpose{
+    clear: both;
+    margin-top: -480px;
+}
+
+.course_purpose h2{
+    font-size: 28px;
+    margin-top:50px;
+    margin-bottom: 15px;
+    
+}
+
+.purpose_img h3{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.purpose_img{
+    display: flex;
+}
+
+.course_purpose img{
+    width:250px;
+    height: 180px;
+    margin-right: 20px;
+}
+
+/*课程安排*/
+.course_sechdule{
+    display: flex;
+    flex-direction: column;  
+}
+
+.course_sechdule h2{
+    font-size: 28px;
+    margin-top:75px;
+    text-align: center;
+}
+
+/* 课程介绍 */
+.course_intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:1080px;
+}
+
+.course_intro p{
+    line-height: 20px;
+}
+
+.course_html,.course_css,.course_js,.course_html_css_js {
+    height:100px;
+    margin-bottom: 50px;
+}
+
+.course_sechdule img{
+    width:120px;
+    height: 120px;
+    border-radius: 50%;
+    float:left;
+    margin-right:20px;
+}
+
+/*课程标签*/
+.course_sechdule span{
+    display: inline-block;
+    padding:0px 10px;
+    margin-right:10px;
+    border-radius: 10px;
+    color:white;
+}
+
+.label_of_html{
+    background-color: rgb(159, 140, 185);
+}
+
+.label_of_css{
+    background-color: rgb(20, 97, 52);
+}
+
+.label_of_js{
+    background-color: rgb(23, 16, 85);
+}
+
+
+/*课程选择*/
+.course_select{
+    margin-left:auto;
+    width:300px;
+    height: 80px;
+}
+
+.course_select ul{
+    float:right;
+    height:50px;
+    margin:0;
+    padding:0;
+    display: flex;
+}
+
+.course_select li{
+    display: inline-block;
+    border-bottom: 1px solid gainsboro;
+    list-style-type: none;
+    text-align: center;
+    width:80px;
+}
+
+.course_select li a{
+    display: inline-block;
+    text-decoration: none;
+    width:100%;
+    line-height: 50px;
+    color: rgb(184, 181, 181);
+    text-align: center;
+}
+
+.course_select li a.active{
+    border-bottom: 2px solid black;
+    color:black;
+    font-weight: bold;
+}
+
+.course_intro .course_select{
+    clear: both;
+    height: 500px;
+}
+
+.course_sechdule div{
+    background-color: white;
+    /* position:absolute; */
+}
+
+.course_sechdule .active_panel{
+    z-index:1;
+}
+
+/*网站底部*/
+footer{
+    background-color: gainsboro;
+    height: 250px;
+    margin-top:200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: monospace;
+}
+
+/* 网站底部logo */
+.web_footer_logo{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.web_footer_logo1,.web_footer_logo2,.web_footer_logo3{
+    width:50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.835);
+    border-radius: 50%;
+    margin-right: 25px;
+}
+
+.web_footer_logo span{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding-top: 8px;
+}
+
+/* 网站底部链接 */
+.footer_links{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_link1,.footer_link2,.footer_link3{
+    padding-right:70px;
+}
+
+.footer_links ul {
+    list-style-type: none;
+}
+
+.footer_links a{
+    display: block;
+    text-decoration: none;
+    color:rgb(61, 61, 61);
+    margin-bottom: 8px;
+    margin-left:-40px;
+}
+
+.footer_links a:hover{
+    text-decoration:underline;
+}
+

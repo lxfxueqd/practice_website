@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>前端学习网站</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <header>
+            <!-- 网站logo、标题 -->
+            <div class="header_top">
+                <div class="web_title">
+                <img class="logo" src="images/logo.png" alt="网站logo">
+                    <div class="web_name">
+                        <span>前端学习网站</span>
+                    </div>
+                </div>
+                <!-- 网站导航栏 -->
+                <nav>
+                    <ul>
+                        <li><a href="#" onclick="test()">开发文档</a></li>
+                        <li><a href="#">交流中心</a></li>
+                        <li><a href="#">服务市场</a></li>
+                        <li><a href="#">开源联盟</a></li>
+                        <li><a href="#"  class="active">管理中心</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- 网站欢迎词 -->
+            <div class="header_bottom">
+                <span>前端训练营2022开营了，赶紧报名吧！</span>
+            </div>
+        </div>
+        </header>
+
+        <main>
+            <!-- 报名区域 -->
+            <section class="sign_up">
+                <form class="sign_up_form">
+                    <div class="form_1">
+                    <div>
+                        <label for="school">选择您的学校</label>
+                        <div id="school"></div>
+                    </div>
+                    <div class="year_select">
+                        <label for="year_of_enter_school">选择入学年份</label>
+                        <div id="year_of_enter_school"></div>   
+                    </div>
+                    <div class="email">
+                        <label for="school">输入您的电子邮箱</label>
+                        <input type="email" id="mail" placeholder="输入您的电子邮箱" value="">
+                    </div>
+                    <div class="button">
+                        <button type="submit" class="btn_sign_up">报名</button>
+                    </div>
+                    </div>
+
+                    <!-- 学校选择弹框 -->
+                    <div class="form_2">
+                        <div id="school_select_panel">
+                        </div>
+                    </div>
+
+                    <!-- 入学年份选择弹框 -->
+                    <div class="form_3"> 
+                        <div id="year_select_panel">
+                        </div>
+                    </div> 
+
+                </form>
+            </section>
+
+            <!-- 网站宗旨 -->
+            <section class="course_purpose">
+                <h2>我们的宗旨</h2>
+                <div class="purpose_img">
+                <div class="thinking">
+                    <h3>自律独立思考</h3>
+                    <img src="images/thinking_img.png" alt="自律独立思考相关图片">
+                </div>
+                <div class="practice">
+                    <h3>实践</h3>
+                    <img src="images/practice_img.png" alt="实践相关图片">
+                </div>
+                <div class="conclusion">
+                    <h3>总结回顾</h3>
+                    <img src="images/conclude_img.png" alt="总结回顾相关图片">
+                </div>
+                <div class="sharing">
+                    <h3>分享交流</h3>
+                    <img src="images/share_img.png" alt="分享交流相关图片">
+                </div>
+            </div>
+            </section>
+
+            <!-- 课程安排 -->
+            <section class="course_sechdule">
+                <h2>课程安排</h2>
+                <!-- 不同类型课程选择 -->
+                <div class="course_select">
+                    <ul>
+                        <li><a href="#" class="active" id="course_all">全部</a></li>
+                        <li><a href="#" id="course_of_html">HTML</a></li>
+                        <li><a href="#" id="course_of_css">CSS</a></li>
+                        <li><a href="#" id="course_of_js">JavaScript</a></li>
+                    </ul>
+                </div>
+
+                <!-- 课程介绍 -->
+                <div class="course_intro">
+                    <div class="course_html">
+                    <img src="images/class_img.png" alt="课程照片">
+                    <h3>第一课 HTML介绍(上)</h3>
+                    <p>这门课程通过介绍HTML的基础知识来帮助你入门， HTML 最基础的部分讲起，对元素（Element）、属性（Attribute）以及可能涉及的一些重要术语进行介绍，并明确它们在语言中所处的位置。
+                        本节课还会讲解 HTML 元素和页面的组织方式，以及其他一些重要的基本语言特性。</p>
+                    <span class="label_of_html">HTML</span>
+                    </div>
+
+                    <div class="course_html">
+                    <img src="images/class_img.png" alt="课程照片">
+                    <h3>第二课 HTML介绍(下)</h3>
+                    <p>这门课程通过介绍HTML的基础知识来帮助你入门， HTML 最基础的部分讲起，对元素（Element）、属性（Attribute）以及可能涉及的一些重要术语进行介绍，并明确它们在语言中所处的位置。
+                        本节课还会讲解 HTML 元素和页面的组织方式，以及其他一些重要的基本语言特性。</p>
+                    <span class="label_of_html">HTML</span>
+                    </div>
+
+                    <div class="course_css">
+                    <img src="images/class_img.png" alt="课程照片">
+                    <h3>第三课 CSS介绍(上)</h3>
+                    <p>这门课程通过介绍HTML的基础知识来帮助你入门， HTML 最基础的部分讲起，对元素（Element）、属性（Attribute）以及可能涉及的一些重要术语进行介绍，并明确它们在语言中所处的位置。
+                        本节课还会讲解 HTML 元素和页面的组织方式，以及其他一些重要的基本语言特性。</p>
+                    <span class="label_of_css">CSS</span>
+                    </div>
+
+                    <div class="course_css">
+                    <img src="images/class_img.png" alt="课程照片">
+                    <h3>第四课 CSS介绍(下)</h3>
+                    <p>这门课程通过介绍HTML的基础知识来帮助你入门， HTML 最基础的部分讲起，对元素（Element）、属性（Attribute）以及可能涉及的一些重要术语进行介绍，并明确它们在语言中所处的位置。
+                        本节课还会讲解 HTML 元素和页面的组织方式，以及其他一些重要的基本语言特性。</p>
+                    <span class="label_of_css">CSS</span>
+                    </div>
+
+                    <div class="course_js">
+                    <img src="images/class_img.png" alt="课程照片">
+                    <h3>第五课 JavaScript入门</h3>
+                    <p>这门课程通过介绍HTML的基础知识来帮助你入门， HTML 最基础的部分讲起，对元素（Element）、属性（Attribute）以及可能涉及的一些重要术语进行介绍，并明确它们在语言中所处的位置。
+                        本节课还会讲解 HTML 元素和页面的组织方式，以及其他一些重要的基本语言特性。</p>
+                    <span class="label_of_js">JavaScript</span>
+                    </div>
+
+                    <div class="course_html_css_js">
+                    <img src="images/class_img.png" alt="课程照片">
+                    <h3>第六课 Web框架介绍</h3>
+                    <p>这门课程通过介绍HTML的基础知识来帮助你入门， HTML 最基础的部分讲起，对元素（Element）、属性（Attribute）以及可能涉及的一些重要术语进行介绍，并明确它们在语言中所处的位置。
+                        本节课还会讲解 HTML 元素和页面的组织方式，以及其他一些重要的基本语言特性。</p>
+                    <span class="label_of_html">HTML</span><span class="label_of_css">CSS</span><span class="label_of_js">JavaScript</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 网站底部 -->
+        <footer>
+            <!-- 网站底部logo -->
+            <div class="web_footer_logo">
+                <div class="web_footer_logo1">
+                    <span>W</span>
+                </div>
+                <div class="web_footer_logo2">
+                    <span>E</span>
+                </div>
+                <div class="web_footer_logo3">
+                    <span>B</span>
+                </div>
+            </div>
+            <!-- 网站底部链接 -->
+            <div class="footer_links">
+                <div class="footer_link1">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="#">技术培训中心</a></li>
+                        <li><a href="#">技术中心</a></li>
+                        <li><a href="#">培训中心</a></li>
+                        <li><a href="#">技术培训中心</a></li>
+                        <li><a href="#">培训中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer_link2">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="#">技术培训中心</a></li>
+                        <li><a href="#">技术中心</a></li>
+                        <li><a href="#">培训中心</a></li>
+                        <li><a href="#">技术培训中心</a></li>
+                        <li><a href="#">培训中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer_link3">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="#">技术培训中心</a></li>
+                        <li><a href="#">技术中心</a></li>
+                        <li><a href="#">培训中心</a></li>
+                        <li><a href="#">技术培训中心</a></li>
+                        <li><a href="#">培训中心</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </footer>
+
+        <!-- 链接js文件 -->
+        <script type="text/javascript" src="js/school_select.js"></script>
+        <script type="text/javascript" src="js/year_select.js"></script>
+        <script type="text/javascript" src="js/class_select.js"></script>    
+        <script type="text/javascript" src="js/tips.js"></script>
+    </body>
+</html>
